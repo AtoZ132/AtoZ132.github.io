@@ -1,0 +1,280 @@
+
+// Light theme code block background
+body:not([data-theme="dark"]) {
+  pre.highlight, pre {
+    background-color: #fbf1c7;  // gruvbox light bg
+    border-color: #d5c4a1;
+  }
+  
+  .highlight {
+    background-color: #fbf1c7;
+    color: #3c3836;  // dark text for light bg
+    
+    // Keywords (return, if, for, etc) - RED
+    .k, .kn, .kp, .kr, .kv, .kw {
+      color: #9d0006;  // gruvbox light red
+    }
+    
+    // Types (int, void, etc) - YELLOW/ORANGE
+    .kt, .kd, .nc, .nn {
+      color: #b57614;  // gruvbox light yellow
+    }
+    
+    // Numbers - PURPLE
+    .kc, .m, .mf, .mh, .mi, .il, .mo, .mb, .mx {
+      color: #8f3f71;  // gruvbox light purple
+    }
+    
+    // Functions - GREEN
+    .nf, .fm {
+      color: #79740e;  // gruvbox light green
+    }
+    
+    // Strings - GREEN
+    .s, .sb, .sc, .sd, .s2, .sh, .sx, .s1 {
+      color: #79740e;  // gruvbox light green
+    }
+    
+    // Operators - ORANGE
+    .o, .ow, .si, .se {
+      color: #af3a03;  // gruvbox light orange
+    }
+    
+    // Comments - GRAY
+    .c, .cd, .cm, .c1, .cs {
+      color: #928374;
+      font-style: italic;
+    }
+    
+    // Built-in functions - AQUA
+    .nb, .bp {
+      color: #427b58;  // gruvbox light aqua
+    }
+    
+    // Preprocessor - AQUA
+    .cp {
+      color: #427b58;
+    }
+    
+    // Normal text
+    .n, .p, .pi, .w {
+      color: #3c3836;
+    }
+  }
+  
+  code.highlighter-rouge {
+    background-color: #c5cce74b;
+    border-color: #b6b6b62d;
+    color: #3c3836;
+    border-radius: 4px;
+    padding: 1px 3px;
+    position: relative;
+  }
+}
+// Code
+code {
+  font-family: $mono-family;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "calt" 1;
+  font-variant-ligatures: normal;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  font-size: inherit;
+
+  &.highlighter-rouge {
+    padding: 1px 3px;
+    position: relative;
+    top: -1px;
+    background-color: #f6f6f6;
+    border-radius: 2px;
+    border: 1px solid #8080801a;
+  }
+}
+
+// Codeblock Theme
+pre.highlight, pre {
+  margin: 0 -27px;
+  @include media-query($on-mobile) {
+    margin: 0 calc(51% - 51vw);
+    padding-left: 20px;
+  }
+  border: 1px solid #3c3836;
+  background-color: #282828;
+  border-radius: 2px;
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+
+
+  > code {
+    width: 100%;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    display: block;
+    border: 0;
+    
+  }
+}
+
+.highlight table td {
+  padding: 5px;
+
+}
+
+.highlight table pre {
+  margin: 0;
+  
+}
+
+.highlight,
+.highlight .w {
+  color: #fbf1c7;
+  // background-color: #3c3836;
+}
+
+.highlight .err {
+  color: #cc241d;
+  // background-color: #3c3836;
+  font-weight: bold;
+}
+
+.highlight .c,
+.highlight .cd,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: #928374;
+  font-style: italic;
+}
+
+.highlight .cp {
+  color: #8ec07c;
+}
+
+.highlight .nt {
+  color: #fb4934;
+}
+
+.highlight .o,
+.highlight .ow {
+  color: #fe8019;
+}
+
+.highlight .p,
+.highlight .pi {
+  color: #ebdbb2;
+}
+
+.highlight .gi {
+  color: #b8bb26;
+  background-color: #282828;
+}
+
+.highlight .gd {
+  color: #fb4934;
+  background-color: #282828;
+}
+
+.highlight .gh {
+  color: #b8bb26;
+  font-weight: bold;
+}
+
+.highlight .k,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kv,
+.highlight .kw {
+  color: #fb4934;
+}
+
+.highlight .kc {
+  color: #d3869b;
+}
+
+.highlight .kt {
+  color: #fabd2f;
+}
+
+.highlight .kd {
+  color: #fe8019;
+}
+
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .s1 {
+  color: #98971a;
+  font-style: italic;
+}
+
+.highlight .si {
+  color: #fe8019;
+  font-style: italic;
+}
+
+.highlight .sr {
+  color: #b8bb26;
+  font-style: italic;
+}
+
+.highlight .se {
+  color: #fe8019;
+}
+
+.highlight .nn,
+.highlight .nc {
+  color: #fabd2f;
+}
+
+.highlight .no {
+  color: #d3869b;
+}
+
+.highlight .na {
+  color: #b8bb26;
+}
+
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mb,
+.highlight .mx {
+  color: #d3869b;
+}
+
+.highlight .ss {
+  color: #83a598;
+}
+
+.highlight .nf,
+.highlight .fm {
+  color: #b8bb26;
+  
+}
+
+// Variables
+// .nv, .vc, .vg, .vi {
+//   color: #83a598;  // gruvbox blue
+// }
+
+// .n {
+//   color: #ebdbb2;
+// }
+
+// Built-in functions
+.nb, .bp {
+  color: #fabd2f;  // gruvbox yellow
+}
