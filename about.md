@@ -1,5 +1,5 @@
 ---
-title: AtoZ132
+title: About
 permalink: /about/
 layout: page
 comments: false
